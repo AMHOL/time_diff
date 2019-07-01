@@ -1,0 +1,13 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+require 'bundler/setup'
+require 'pet_rescue/time_diff'
+
+if ARGV.include?('--pry')
+  require 'pry'
+  Pry.start(__FILE__)
+else
+  require 'irb'
+  IRB.start(__FILE__)
+end
